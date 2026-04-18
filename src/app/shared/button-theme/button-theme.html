@@ -1,0 +1,29 @@
+<div class="floating-container">
+    <div class="toggleWrapper">
+        <input class="input" id="dn" type="checkbox" #chkTema [checked]="isDarkMode"
+            (change)="toggleTheme(chkTema.checked)" />
+        <label class="toggle" for="dn">
+            <!-- SOL -->
+            <span class="sun">
+                <i class="bi bi-sun-fill"></i>
+                <span class="ray r1"></span>
+                <span class="ray r2"></span>
+                <span class="ray r3"></span>
+                <span class="ray r4"></span>
+                <span class="ray r5"></span>
+                <span class="ray r6"></span>
+                <span class="ray r7"></span>
+                <span class="ray r8"></span>
+            </span>
+            <!-- LUNA -->
+            <span class="moon">
+                <i class="bi bi-moon-stars-fill"></i>
+                <span class="crater crater1"></span>
+                <span class="crater crater2"></span>
+                <span class="crater crater3"></span>
+            </span>
+            <!-- ESTRELLAS -->
+            <span class="stars"></span>
+        </label>
+    </div>
+</div>

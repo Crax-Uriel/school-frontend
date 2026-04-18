@@ -1,0 +1,140 @@
+/* CONTENEDOR FLOTANTE */
+.floating-container{
+    position: fixed;
+    bottom: 22px;
+    left: 22px;
+    z-index: 1050;
+}
+
+/* WRAPPER */
+.toggleWrapper{
+    transform: scale(.75);
+}
+
+/* OCULTAR CHECKBOX */
+.input{
+    position:absolute;
+    opacity:0;
+}
+
+/* SWITCH BASE */
+.toggle{
+    position:relative;
+    width:85px;
+    height:42px;
+    border-radius:50px;
+    cursor:pointer;
+    display:block;
+    background:linear-gradient(180deg,#87cefa,#4fc3f7);
+    transition:.5s;
+    overflow:hidden;
+    box-shadow:
+        inset 0 4px 10px rgba(0,0,0,.25),
+        0 4px 12px rgba(0,0,0,.20);
+}
+
+/* ================= SUN ================= */
+.sun{
+    position:absolute;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:radial-gradient(circle,#FFD54F,#FF9800);
+    top:6px;
+    left:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:14px;
+    transition:.6s cubic-bezier(.68,-0.55,.27,1.55);
+    box-shadow:0 0 20px #ff9800;
+}
+
+/* RAYOS */
+.ray{
+    position:absolute;
+    width:3px;
+    height:9px;
+    background:#FFC107;
+    left:50%;
+    top:50%;
+    transform-origin:center -13px;
+    border-radius:2px;
+    box-shadow:0 0 8px #ffc107;
+}
+
+.r1{ transform:translate(-50%,-50%) rotate(0deg); }
+.r2{ transform:translate(-50%,-50%) rotate(45deg); }
+.r3{ transform:translate(-50%,-50%) rotate(90deg); }
+.r4{ transform:translate(-50%,-50%) rotate(135deg); }
+.r5{ transform:translate(-50%,-50%) rotate(180deg); }
+.r6{ transform:translate(-50%,-50%) rotate(225deg); }
+.r7{ transform:translate(-50%,-50%) rotate(270deg); }
+.r8{ transform:translate(-50%,-50%) rotate(315deg); }
+
+/* ================= MOON ================= */
+.moon{
+    position:absolute;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:#f1f1f1;
+    top:6px;
+    left:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0d133d;
+    font-size:14px;
+    opacity:0;
+    transition:.6s cubic-bezier(.68,-0.55,.27,1.55);
+    box-shadow:0 0 18px #fff;
+}
+
+/* CRÁTERES */
+.crater{
+    position:absolute;
+    background:#d6d6d6;
+    border-radius:50%;
+}
+.crater1{ width:5px;height:5px; top:6px; left:8px;}
+.crater2{ width:4px;height:4px; top:15px; left:15px;}
+.crater3{ width:3px;height:3px; top:18px; left:6px;}
+
+/* ESTRELLAS */
+.stars{
+    position:absolute;
+    inset:0;
+    background-image:
+        radial-gradient(2px 2px at 20px 10px #fff, transparent),
+        radial-gradient(2px 2px at 60px 25px #fff, transparent),
+        radial-gradient(2px 2px at 45px 8px #fff, transparent),
+        radial-gradient(2px 2px at 30px 30px #fff, transparent);
+    opacity:0;
+    transition:.5s;
+}
+
+/* ===== DARK MODE ===== */
+.input:checked + .toggle{
+    background:linear-gradient(180deg,#0d133d,#020617);
+}
+
+.input:checked + .toggle .sun{
+    transform:translateX(42px);
+    opacity:0;
+}
+
+.input:checked + .toggle .moon{
+    transform:translateX(42px);
+    opacity:1;
+}
+
+.input:checked + .toggle .stars{
+    opacity:1;
+}
+
+/* HOVER PREMIUM */
+.toggle:hover{
+    transform:scale(1.04);
+}
